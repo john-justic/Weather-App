@@ -3,7 +3,7 @@
 This program provides  weather conditions, relative humidity, wind speed and direction, in addition to five days in future weather forecast
 
 ## Built with
-This project has been built by:
+This project has been built with the following files:
 
 - bootstrap files
 - HTML
