@@ -48,17 +48,17 @@ function currentWeather(city){
         var date=new Date(response.dt*1000).toLocaleDateString();
         //parse the response for name of city and concanatig the date and icon.
         $(currentCity).html(response.name +"("+date+")" + "<img src="+iconurl+">");
-        parse Display Wind speed and convert to MPH
-        var ws=response.wind.speed;
-        var windsmph=(ws*2.237).toFixed(1);
-        $(currentWSpeedthe response to display the current temperature.
+        // parse the response to display the current temperature.
         // Convert the temp to fahrenheit
 
         var tempF = (response.main.temp - 273.15) * 1.80 + 32;
         $(currentTemperature).html((tempF).toFixed(2)+"&#8457");
         // Display the Humidity
         $(currentHumidty).html(response.main.humidity+"%");
-        ).html(windsmph+"MPH");
+        //Display Wind speed and convert to MPH
+        var ws=response.wind.speed;
+        var windsmph=(ws*2.237).toFixed(1);
+        $(currentWSpeed).html(windsmph+"MPH");
         // Display UVIndex.
         //By Geographic coordinates method and using appid and coordinates as a parameter we are going build our uv query url inside the function below.
         UVIndex(response.coord.lon,response.coord.lat);
@@ -118,7 +118,7 @@ function forecast(cityid){
             $("#fTemp"+i).html(tempF+"&#8457");
             $("#fHumidity"+i).html(humidity+"%");
         }
-
+        
     });
 }
 
