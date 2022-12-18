@@ -15,6 +15,7 @@ This project has been built by:
 
 To get started with this program you just need to visit its website at:
 
+         https://john-justic.github.io/Weather-App/
 ## license
 "LSC"
 
