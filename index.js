@@ -11,25 +11,25 @@ var currentHumidty= $("#humidity");
 var currentWSpeed=$("#wind-speed");
 var currentUvindex= $("#uv-index");
 var sCity=[];
-// // searches the city to see if it exists in the entries from the storage
-// function find(c){
-//     for (var i=0; i<sCity.length; i++){
-//         if(c.toUpperCase()===sCity[i]){
-//             return -1;
-//         }
-//     }
-//     return 1;
-// }
-// //Set up the API key
-// var APIKey="a0aca8a89948154a4182dcecc780b513";
-// // Display the curent and future weather to the user after grabing the city form the input text box.
-// function displayWeather(event){
-//     event.preventDefault();
-//     if(searchCity.val().trim()!==""){
-//         city=searchCity.val().trim();
-//         currentWeather(city);
-//     }
-// }
+// searches the city to see if it exists in the entries from the storage
+function find(c){
+    for (var i=0; i<sCity.length; i++){
+        if(c.toUpperCase()===sCity[i]){
+            return -1;
+        }
+    }
+    return 1;
+}
+//Set up the API key
+var APIKey="a0aca8a89948154a4182dcecc780b513";
+// Display the curent and future weather to the user after grabing the city form the input text box.
+function displayWeather(event){
+    event.preventDefault();
+    if(searchCity.val().trim()!==""){
+        city=searchCity.val().trim();
+        currentWeather(city);
+    }
+}
 // // Here we create the AJAX call
 // function currentWeather(city){
 //     // Here we build the URL so we can get a data from server side.
