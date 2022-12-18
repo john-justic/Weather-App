@@ -1,0 +1,26 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "phase-1-finall-project",
+  "main": "node index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-justic/Weather-App.git"
+  },
+  "keywords": [
+    "index.html",
+    "index.js",
+    "index.css",
+    "bootstrap.js",
+    "bootstrap.css"
+  ],
+  "author": "John Justice",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-justic/Weather-App/issues"
+  },
+  "homepage": "https://github.com/john-justic/Weather-App#readme"
+}
