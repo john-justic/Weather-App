@@ -48,53 +48,53 @@ function currentWeather(city){
         var date=new Date(response.dt*1000).toLocaleDateString();
         //parse the response for name of city and concanatig the date and icon.
         $(currentCity).html(response.name +"("+date+")" + "<img src="+iconurl+">");
-        // parse the response to display the current temperature.
-//         // Convert the temp to fahrenheit
+        parse Display Wind speed and convert to MPH
+        var ws=response.wind.speed;
+        var windsmph=(ws*2.237).toFixed(1);
+        $(currentWSpeedthe response to display the current temperature.
+        // Convert the temp to fahrenheit
 
-//         var tempF = (response.main.temp - 273.15) * 1.80 + 32;
-//         $(currentTemperature).html((tempF).toFixed(2)+"&#8457");
-//         // Display the Humidity
-//         $(currentHumidty).html(response.main.humidity+"%");
-//         //Display Wind speed and convert to MPH
-//         var ws=response.wind.speed;
-//         var windsmph=(ws*2.237).toFixed(1);
-//         $(currentWSpeed).html(windsmph+"MPH");
-//         // Display UVIndex.
-//         //By Geographic coordinates method and using appid and coordinates as a parameter we are going build our uv query url inside the function below.
-//         UVIndex(response.coord.lon,response.coord.lat);
-//         forecast(response.id);
-//         if(response.cod==200){
-//             sCity=JSON.parse(localStorage.getItem("cityname"));
-//             console.log(sCity);
-//             if (sCity==null){
-//                 sCity=[];
-//                 sCity.push(city.toUpperCase()
-//                 );
-//                 localStorage.setItem("cityname",JSON.stringify(sCity));
-//                 addToList(city);
-//             }
-//             else {
-//                 if(find(city)>0){
-//                     sCity.push(city.toUpperCase());
-//                     localStorage.setItem("cityname",JSON.stringify(sCity));
-//                     addToList(city);
-//                 }
-//             }
-//         }
+        var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+        $(currentTemperature).html((tempF).toFixed(2)+"&#8457");
+        // Display the Humidity
+        $(currentHumidty).html(response.main.humidity+"%");
+        ).html(windsmph+"MPH");
+        // Display UVIndex.
+        //By Geographic coordinates method and using appid and coordinates as a parameter we are going build our uv query url inside the function below.
+        UVIndex(response.coord.lon,response.coord.lat);
+        forecast(response.id);
+        if(response.cod==200){
+            sCity=JSON.parse(localStorage.getItem("cityname"));
+            console.log(sCity);
+            if (sCity==null){
+                sCity=[];
+                sCity.push(city.toUpperCase()
+                );
+                localStorage.setItem("cityname",JSON.stringify(sCity));
+                addToList(city);
+            }
+            else {
+                if(find(city)>0){
+                    sCity.push(city.toUpperCase());
+                    localStorage.setItem("cityname",JSON.stringify(sCity));
+                    addToList(city);
+                }
+            }
+        }
 
-//     });
-// }
-//     // This function returns the UVIindex response.
-// function UVIndex(ln,lt){
-//     //lets build the url for uvindex.
-//     var uvqURL="https://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey+"&lat="+lt+"&lon="+ln;
-//     $.ajax({
-//             url:uvqURL,
-//             method:"GET"
-//             }).then(function(response){
-//                 $(currentUvindex).html(response.value);
-//             });
-// }
+    });
+}
+    // This function returns the UVIindex response.
+function UVIndex(ln,lt){
+    //lets build the url for uvindex.
+    var uvqURL="https://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey+"&lat="+lt+"&lon="+ln;
+    $.ajax({
+            url:uvqURL,
+            method:"GET"
+            }).then(function(response){
+                $(currentUvindex).html(response.value);
+            });
+}
     
 // // Here we display the 5 days forecast for the current city.
 // function forecast(cityid){
