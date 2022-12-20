@@ -2,6 +2,8 @@
 ## Description
 This program provides  weather conditions, relative humidity, wind speed and direction, in addition to five days in future weather forecast
 
+This program measures the temperature in fahrenheit scale.
+
 ## Built with
 This project has been built with the following files:
 
