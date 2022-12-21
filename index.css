@@ -1,9 +1,10 @@
 
 *{
     box-sizing: border-box;
-    background-image: linear-gradient(-90deg, rgb(55, 55, 56),rgb(225, 233, 237));
-    color:rgb(3, 5, 9);
-    background-color: rgb(240, 247, 255);
+    background-image: linear-gradient(-90deg, rgb(88, 88, 90),rgb(209, 223, 230));
+    color:rgb(1, 9, 12);
+    background-color: rgb(18, 22, 30);
+    background-image: url(john11.jpg);
 }
 
 body {
@@ -16,6 +17,7 @@ h3{
     font-weight: bold;
 }
 .forecast{
+  background-color: rgb(137, 131, 123);
     
     font-size: 0.9em;
 }
@@ -23,7 +25,7 @@ span{
     font-size: 1em;
 }
 li:hover{
-    background-color: rgb(233, 167, 152);
+    background-color: rgb(207, 193, 189);
     text-decoration: underline;
 }
 fieldset {
@@ -41,6 +43,7 @@ fieldset {
     margin: 0.5rem 0;
   }
   form {
+    background-color: rgb(14, 40, 62);
     width: 60vw;
     max-width: 500px;
     min-width: 300px;
