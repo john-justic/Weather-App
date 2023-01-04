@@ -18,6 +18,13 @@ This project has been built with the following files:
 To get started with this program you just need to visit its website at:
 
          https://john-justic.github.io/Weather-App/
+
+## Deployment link
+
+This is the link that can lead you to this site:
+
+        https://john-justic.github.io/Weather-App/
+
 ## license
 "LSC"
 
